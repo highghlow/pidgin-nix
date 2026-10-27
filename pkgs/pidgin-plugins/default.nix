@@ -1,0 +1,62 @@
+{
+  lib,
+  newScope,
+  pidgin,
+  texliveBasic,
+  config,
+}:
+
+lib.makeScope newScope (
+  self:
+  let
+    callPackage = self.callPackage;
+  in
+  {
+    pidgin = callPackage ../. {
+      withOpenssl = config.pidgin.openssl or true;
+      withGnutls = config.pidgin.gnutls or false;
+      plugins = [ ];
+    };
+
+    pidginPackages = self;
+
+    pidgin-latex = callPackage ./pidgin-latex {
+      texLive = texliveBasic;
+    };
+
+    pidgin-carbons = callPackage ./carbons { };
+
+    pidgin-xmpp-receipts = callPackage ./pidgin-xmpp-receipts { };
+
+    pidgin-otr = callPackage ./otr { };
+
+    pidgin-osd = callPackage ./pidgin-osd { };
+
+    pidgin-sipe = callPackage ./sipe { };
+
+    pidgin-window-merge = callPackage ./window-merge { };
+
+    purple-discord = callPackage ./purple-discord { };
+
+    purple-googlechat = callPackage ./purple-googlechat { };
+
+    purple-lurch = callPackage ./purple-lurch { };
+
+    purple-mm-sms = callPackage ./purple-mm-sms { };
+
+    purple-plugin-pack = callPackage ./purple-plugin-pack { };
+
+    purple-slack = callPackage ./purple-slack { };
+
+    tdlib-purple = callPackage ./tdlib-purple { };
+  }
+  // lib.optionalAttrs config.allowAliases {
+    pidgin-indicator = throw "'pidginPackages.pidgin-indicator' has been removed as it depended on libappindicator-gtk2, which was removed for depending on the deprecated GTK 2 engine."; # Added 2026-08-10
+    purple-matrix = throw "'pidginPackages.purple-matrix' has been unmaintained since April 2022, so it was removed.";
+    pidgin-msn-pecan = throw "'pidginPackages.pidgin-msn-pecan' has been removed as it's unmaintained upstream and doesn't work with escargot";
+    purple-facebook = throw "'pidginPackages.purple-facebook' has been removed as it is unmaintained and doesn't support e2ee enforced by facebook.";
+    pidgin-opensteamworks = throw "'pidginPackages.pidgin-opensteamworks' has been removed as it is unmaintained and no longer works with Steam.";
+    purple-vk-plugin = throw "'pidginPackages.purple-vk-plugin' has been removed as upstream repository was deleted and no active forks are found.";
+    purple-xmpp-http-upload = throw "'pidginPackages.purple-xmpp-http-upload' has been removed because it is no longer maintained upstream."; # Added 2026-09-02
+  }
+)
