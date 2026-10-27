@@ -48,6 +48,8 @@ lib.makeScope newScope (
 
     purple-slack = callPackage ./purple-slack { };
 
+    purple-vk-plugin = callPackage ./purple-vk-plugin { };
+
     purple-xmpp-http-upload = callPackage ./purple-xmpp-http-upload { };
 
     tdlib-purple = callPackage ./tdlib-purple { };
@@ -59,6 +61,5 @@ lib.makeScope newScope (
   // lib.optionalAttrs config.allowAliases {
     pidgin-indicator = throw "'pidginPackages.pidgin-indicator' has been removed as it depended on libappindicator-gtk2, which was removed for depending on the deprecated GTK 2 engine."; # Added 2026-08-10
     purple-matrix = throw "'pidginPackages.purple-matrix' has been unmaintained since April 2022, so it was removed.";
-    purple-vk-plugin = throw "'pidginPackages.purple-vk-plugin' has been removed as upstream repository was deleted and no active forks are found.";
   }
 )

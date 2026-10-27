@@ -24,7 +24,7 @@ pidginPackages.
   purple-mm-sms
   purple-plugin-pack (broken)
   purple-slack
-  purple-vk-plugin (removed)
+  purple-vk-plugin (broken)
   purple-xmpp-http-upload
   tdlib-purple
 ```
