@@ -17,7 +17,7 @@ pidginPackages.
   pidgin-window-merge
   pidgin-xmpp-receipts
   purple-discord
-  purple-facebook (removed)
+  purple-facebook (broken)
   purple-googlechat
   purple-lurch
   purple-matrix (removed)
