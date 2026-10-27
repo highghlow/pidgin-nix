@@ -10,8 +10,7 @@ pidginPackages.
   pidign-carbons
   pidgin-indicator (removed)
   pidgin-latex
-  pidgin-msn-pecan (removed)
-  pidgin-opensteamworks (removed)
+  pidgin-opensteamworks
   pidgin-osd
   pidgin-otr
   pidgin-sipe

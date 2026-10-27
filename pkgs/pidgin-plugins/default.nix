@@ -51,13 +51,13 @@ lib.makeScope newScope (
     purple-xmpp-http-upload = callPackage ./purple-xmpp-http-upload { };
 
     tdlib-purple = callPackage ./tdlib-purple { };
+
+    pidgin-opensteamworks = callPackage ./pidgin-opensteamworks { };
   }
   // lib.optionalAttrs config.allowAliases {
     pidgin-indicator = throw "'pidginPackages.pidgin-indicator' has been removed as it depended on libappindicator-gtk2, which was removed for depending on the deprecated GTK 2 engine."; # Added 2026-08-10
     purple-matrix = throw "'pidginPackages.purple-matrix' has been unmaintained since April 2022, so it was removed.";
-    pidgin-msn-pecan = throw "'pidginPackages.pidgin-msn-pecan' has been removed as it's unmaintained upstream and doesn't work with escargot";
     purple-facebook = throw "'pidginPackages.purple-facebook' has been removed as it is unmaintained and doesn't support e2ee enforced by facebook.";
-    pidgin-opensteamworks = throw "'pidginPackages.pidgin-opensteamworks' has been removed as it is unmaintained and no longer works with Steam.";
     purple-vk-plugin = throw "'pidginPackages.purple-vk-plugin' has been removed as upstream repository was deleted and no active forks are found.";
   }
 )
