@@ -26,6 +26,6 @@ pidginPackages.
   purple-plugin-pack (broken)
   purple-slack
   purple-vk-plugin (removed)
-  purple-xmpp-http-upload (removed)
+  purple-xmpp-http-upload
   tdlib-purple
 ```
