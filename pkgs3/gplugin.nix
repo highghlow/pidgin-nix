@@ -12,12 +12,16 @@
   gi-docgen,
   ninja,
   help2man,
+
+  luaSupport ? true,
   lua54Packages,
+
+  pythonSupport ? false, # Crashed pidgin for some reason
   python314Packages,
   python314,
-  vala,
 
-  pythonSupport ? false
+  valaSupport ? true,
+  vala,
 }:
 
 stdenv.mkDerivation rec {
@@ -44,18 +48,22 @@ stdenv.mkDerivation rec {
     help2man
     ninja
     gtk4
+  ] ++ (lib.optional luaSupport [
     lua54Packages.lua
     lua54Packages.lgi
-    vala
-  ] ++ (lib.optional pythonSupport [
+  ]) ++ (lib.optional pythonSupport [
     python314Packages.pygobject3
     python314
+  ]) ++ (lib.optional valaSupport [
+    vala
   ]);
 
   enableParallelBuilding = true;
 
   mesonFlags = [
     (lib.mesonBool "python3" pythonSupport)
+    (lib.mesonBool "lua" luaSupport)
+    (lib.mesonBool "vapi" valaSupport)
   ];
 
   meta = {
