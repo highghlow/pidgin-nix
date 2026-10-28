@@ -20,6 +20,8 @@ lib.makeScope newScope (
 
     pidginPackages = self;
 
+    pidgin-indicator = callPackage ./pidgin-indicator { };
+
     pidgin-latex = callPackage ./pidgin-latex {
       texLive = texliveBasic;
     };
@@ -61,7 +63,6 @@ lib.makeScope newScope (
     purple-facebook = callPackage ./purple-facebook { };
   }
   // lib.optionalAttrs config.allowAliases {
-    pidgin-indicator = throw "'pidginPackages.pidgin-indicator' has been removed as it depended on libappindicator-gtk2, which was removed for depending on the deprecated GTK 2 engine."; # Added 2026-08-10
     purple-matrix = throw "'pidginPackages.purple-matrix' has been unmaintained since April 2022, so it was removed.";
   }
 )

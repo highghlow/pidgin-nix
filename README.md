@@ -8,7 +8,7 @@ Available packages:
 pidgin
 pidginPackages.
   pidign-carbons
-  pidgin-indicator (removed)
+  pidgin-indicator
   pidgin-latex
   pidgin-opensteamworks
   pidgin-libnotify
