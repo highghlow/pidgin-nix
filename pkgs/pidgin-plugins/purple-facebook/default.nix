@@ -11,7 +11,7 @@
 
 let
   pidginHg = fetchhg {
-    url = "https://bitbucket.org/pidgin/main";
+    url = "https://keep.imfreedom.org/pidgin/pidgin";
     # take from VERSION file
     rev = "9ff9acf9fa14";
     sha256 = "06imlhsps4wrjgjb92zpaxprxfxl2pjb2x9pl859c8cryssrz2jv";
