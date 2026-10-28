@@ -21,7 +21,7 @@ pidginPackages.
   purple-facebook (broken)
   purple-googlechat
   purple-lurch
-  purple-matrix (removed)
+  purple-matrix
   purple-mm-sms
   purple-plugin-pack (broken)
   purple-slack
