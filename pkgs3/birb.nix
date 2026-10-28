@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
   version = "0.11.0";
 
   src = fetchurl {
-    url = "https://fastly.imfreedom.org/birb/0.11.0/birb-0.11.0.tar.xz";
+    url = "https://fastly.imfreedom.org/birb/${version}/birb-${version}.tar.xz";
     sha256 = "sha256-k2buZdSg4o2mCVWsw2GPY2cujz8iKSlvivFNZFnKN0E=";
   };
 
