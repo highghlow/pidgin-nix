@@ -11,6 +11,7 @@ pidginPackages.
   pidgin-indicator (removed)
   pidgin-latex
   pidgin-opensteamworks
+  pidgin-libnotify
   pidgin-osd
   pidgin-otr
   pidgin-sipe
