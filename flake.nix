@@ -19,6 +19,14 @@
                 callPackage ./pkgs/pidgin-plugins { }
               );
               inherit (pidginPackages) pidgin;
+
+              birb = callPackage ./pkgs3/birb.nix { };
+              seagull = callPackage ./pkgs3/seagull.nix { };
+              gplugin = callPackage ./pkgs3/gplugin.nix { };
+              hasl = callPackage ./pkgs3/hasl.nix { };
+              xeme = callPackage ./pkgs3/xeme.nix { inherit birb; };
+              ibis = callPackage ./pkgs3/ibis.nix { inherit birb hasl; };
+              pidgin3 = callPackage ./pkgs3 { inherit birb seagull gplugin hasl xeme ibis; };
             };
           })
           [

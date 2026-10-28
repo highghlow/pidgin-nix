@@ -1,0 +1,19 @@
+diff --git a/python3/meson.build b/python3/meson.build
+index 6d7b4e5..34d5914 100644
+--- a/python3/meson.build
++++ b/python3/meson.build
+@@ -32,14 +32,6 @@ if get_option('python3')
+ 	foreach _PYTHON : _PYTHONS
+ 		PYTHON3 = dependency(_PYTHON[0], version : _PYTHON[1], required : false)
+ 		if PYTHON3.found()
+-			python3_gi_test = compiler.run(files('gplugin-python3-test-pygobject.c'),
+-				dependencies : [GLIB, PYTHON3, PYGOBJECT],
+-				name : 'Python3 GI')
+-			if not python3_gi_test.compiled() or python3_gi_test.returncode() != 0
+-				message('pygobject does not work with @0@'.format(_PYTHON[0]))
+-				continue
+-			endif
+-
+ 			PYGOBJECT_WORKS = true
+ 			break
+ 		endif
