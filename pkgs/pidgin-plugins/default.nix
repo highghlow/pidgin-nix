@@ -52,6 +52,8 @@ lib.makeScope newScope (
 
     purple-plugin-pack = callPackage ./purple-plugin-pack { };
 
+    purple-presage = callPackage ./purple-presage { };
+
     purple-slack = callPackage ./purple-slack { };
 
     purple-vk-plugin = callPackage ./purple-vk-plugin { };

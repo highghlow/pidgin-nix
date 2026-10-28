@@ -24,6 +24,7 @@ pidginPackages.
   purple-matrix
   purple-mm-sms
   purple-plugin-pack (broken)
+  purple-presage
   purple-slack
   purple-vk-plugin (broken)
   purple-xmpp-http-upload
