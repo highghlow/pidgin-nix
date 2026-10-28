@@ -64,7 +64,7 @@ stdenv.mkDerivation {
   ];
 
   buildPhase = ''
-    make LDFLAGS=-lcrypto
+    make LDFLAGS="-lcrypto -lqrencode"
   '';
 
   installPhase = ''
