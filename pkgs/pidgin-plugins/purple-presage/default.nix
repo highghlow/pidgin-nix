@@ -60,7 +60,12 @@ stdenv.mkDerivation {
   buildInputs = [
     pidgin
     qrencode
+    openssl
   ];
+
+  buildPhase = ''
+    make LDFLAGS=-lcrypto
+  '';
 
   installPhase = ''
     make install PLUGIN_DIR=$out/lib/purple-2 DATA_ROOT_DIR=$out/share
