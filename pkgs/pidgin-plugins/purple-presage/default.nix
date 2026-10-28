@@ -25,6 +25,8 @@ let
     inherit version;
     src = "${src}/src/rust";
 
+    buildType = "debug";
+
     nativeBuildInputs = [
       protobuf
     ];
