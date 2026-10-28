@@ -6,17 +6,19 @@
   gettext,
   pidgin,
   json-glib,
+  qrencode,
+  nss
 }:
 
 stdenv.mkDerivation {
   pname = "purple-discord";
-  version = "unstable-2021-10-17";
+  version = "unstable-2026-10-25";
 
   src = fetchFromGitHub {
     owner = "EionRobb";
     repo = "purple-discord";
-    rev = "b7ac72399218d2ce011ac84bb171b572560aa2d2";
-    sha256 = "0xvj9rdvgsvcr55sk9m40y07rchg699l1yr98xqwx7sc2sba3814";
+    rev = "ef5993d5677978c08df845601b385f42a23132a9";
+    sha256 = "sha256-/ZuudmJacSZCOW3uZqrqe3YAL+0FKOR/SWvkug5ziNg=";
   };
 
   nativeBuildInputs = [
@@ -26,6 +28,8 @@ stdenv.mkDerivation {
   buildInputs = [
     pidgin
     json-glib
+    qrencode
+    nss
   ];
 
   env = {
