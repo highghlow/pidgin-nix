@@ -32,6 +32,8 @@ lib.makeScope newScope (
 
     pidgin-libnotify = callPackage ./pidgin-libnotify { };
 
+    pidgin-libnotify-plus = callPackage ./pidgin-libnotify-plus { };
+
     pidgin-otr = callPackage ./otr { };
 
     pidgin-osd = callPackage ./pidgin-osd { };
@@ -41,6 +43,8 @@ lib.makeScope newScope (
     pidgin-window-merge = callPackage ./window-merge { };
 
     purple-discord = callPackage ./purple-discord { };
+
+    purple-events = callPackage ./purple-events { };
 
     purple-googlechat = callPackage ./purple-googlechat { };
 
