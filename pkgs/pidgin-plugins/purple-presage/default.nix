@@ -7,6 +7,7 @@
   rustPlatform,
   protobuf,
   openssl,
+  sqlite,
 }:
 
 let
@@ -33,6 +34,7 @@ let
 
     buildInputs = [
       openssl
+      sqlite
     ];
 
     cargoHash = "sha256-/IySmycmUT7NBE59UH3wpfYA/XutaGqdAYQyFSuVe3o=";
